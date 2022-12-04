@@ -1,0 +1,92 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ヘッダー */
+header {
+  height: 50px;
+  background-color: #ff9a4b; /* orange */
+}
+
+/* メイン */
+main {
+  width: 960px;
+  margin: 50px auto;
+  display: flex;
+}
+
+.contents {
+  width: 300px;
+  margin-right: 30px;
+  padding: 10px;
+  position: relative; /* 親要素に入れる */
+  background-color: #eee; /* gray */
+}
+
+.contents:last-child {
+  margin-right: 0; /* 最後の要素は外側の右側は0にする */
+}
+
+/* 画像の読み込み */
+.img-box1 {
+  height: 150px;
+  background-image: url(img/flow01.png);
+  background-position: bottom;
+  background-size: cover;
+}
+
+.img-box2 {
+  height: 150px;
+  background-image: url(img/flow02.png);
+  background-position: bottom;
+  background-size: cover;
+}
+
+.img-box3 {
+  height: 150px;
+  background-image: url(img/flow03.png);
+  background-position: bottom;
+  background-size: cover;
+}
+
+/* ステップ1・2・3 */
+.step {
+  position: absolute; /* 子要素に入れる。絶対値で上側0・左側0 */
+  top: 0;
+  left: 0;
+  background-color: #ff9a4b; /* orange */
+  color: #fff; /* white */
+}
+
+.title-text {
+  margin: 15px 0 5px;
+}
+
+/* フッター */
+footer {
+  height: 50px;
+  background-color: #AAA; /* gray */
+}
+
+
+/* メディアクエリ宣言 */
+@media screen and (max-width: 768px) {
+  main {
+    width: 100%;
+    flex-direction: column; /* 縦 */
+    align-items: center;
+  }
+
+  .contents {
+    width: 90%;
+    margin-bottom: 20px;
+    margin-right: 0;
+  }
+
+  .contents:last-child {
+    margin-bottom: 0;
+  }
+
+}
